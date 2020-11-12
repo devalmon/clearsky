@@ -10,6 +10,7 @@ import UIKit
 class WeatherViewController: UIViewController {
     
     let backgroundView = UIImageView()
+    let rootStackView = UIStackView()
     let searchStackView = UIStackView()
     let locationButton = UIButton()
     let findButton = UIButton()
@@ -29,6 +30,11 @@ extension WeatherViewController {
         backgroundView.image = UIImage(named: .backGroundName)
         backgroundView.contentMode = .scaleAspectFill
         backgroundView.alpha = 0.75
+        
+        rootStackView.translatesAutoresizingMaskIntoConstraints = false
+        rootStackView.alignment = .leading
+        rootStackView.axis = .vertical
+        rootStackView.spacing = 10
         
         searchStackView.translatesAutoresizingMaskIntoConstraints = false
         searchStackView.spacing = 8
@@ -53,10 +59,13 @@ extension WeatherViewController {
     
     func layout() {
         view.addSubview(backgroundView)
+        view.addSubview(rootStackView)
         view.addSubview(searchStackView)
         view.addSubview(locationButton)
         view.addSubview(findButton)
         view.addSubview(searchField)
+        
+        rootStackView.addArrangedSubview(searchStackView)
         
         searchStackView.addArrangedSubview(locationButton)
         searchStackView.addArrangedSubview(searchField)
@@ -68,15 +77,16 @@ extension WeatherViewController {
             backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
             backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             
-            searchStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            searchStackView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: searchStackView.trailingAnchor, multiplier: 1),
+            rootStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            rootStackView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: rootStackView.trailingAnchor, multiplier: 1),
             
             locationButton.widthAnchor.constraint(equalToConstant: 40),
             locationButton.heightAnchor.constraint(equalToConstant: 40),
             
             findButton.widthAnchor.constraint(equalToConstant: 40),
             findButton.heightAnchor.constraint(equalToConstant: 40),
+            rootStackView.trailingAnchor.constraint(equalToSystemSpacingAfter: findButton.trailingAnchor, multiplier: 1)
             
         ])
     }
