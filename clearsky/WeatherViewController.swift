@@ -10,6 +10,7 @@ import UIKit
 class WeatherViewController: UIViewController {
     
     let backgroundView = UIImageView()
+    let searchStackView = UIStackView()
     let locationButton = UIButton()
     let findButton = UIButton()
     let searchField = UITextField()
@@ -29,6 +30,9 @@ extension WeatherViewController {
         backgroundView.contentMode = .scaleAspectFill
         backgroundView.alpha = 0.75
         
+        searchStackView.translatesAutoresizingMaskIntoConstraints = false
+        searchStackView.spacing = 8
+        
         locationButton.translatesAutoresizingMaskIntoConstraints = false
         locationButton.setBackgroundImage(UIImage(systemName: .locationSignName), for: .normal)
         locationButton.tintColor = .label
@@ -38,18 +42,25 @@ extension WeatherViewController {
         findButton.tintColor = .label
         
         searchField.translatesAutoresizingMaskIntoConstraints = false
-//        searchField.font = UIFont(name: "Avenir Next", size: 25)
+        searchField.font = UIFont(name: "AvenirNextCondensed-Bold", size: 20)
+        searchField.textColor = UIColor.systemFill
         searchField.placeholder = "Search"
-        searchField.textAlignment = .left
+        searchField.textAlignment = .right
         searchField.borderStyle = .roundedRect
         searchField.backgroundColor = .systemFill
+        
     }
     
     func layout() {
         view.addSubview(backgroundView)
+        view.addSubview(searchStackView)
         view.addSubview(locationButton)
         view.addSubview(findButton)
         view.addSubview(searchField)
+        
+        searchStackView.addArrangedSubview(locationButton)
+        searchStackView.addArrangedSubview(searchField)
+        searchStackView.addArrangedSubview(findButton)
 
         NSLayoutConstraint.activate([
             backgroundView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
@@ -57,19 +68,23 @@ extension WeatherViewController {
             backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
             backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             
-            locationButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
-            locationButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
+            searchStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            searchStackView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: searchStackView.trailingAnchor, multiplier: 1),
+            
+//            locationButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+//            locationButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
             locationButton.widthAnchor.constraint(equalToConstant: 40),
             locationButton.heightAnchor.constraint(equalToConstant: 40),
             
-            findButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: findButton.trailingAnchor, multiplier: 1),
+//            findButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+//            view.trailingAnchor.constraint(equalToSystemSpacingAfter: findButton.trailingAnchor, multiplier: 1),
             findButton.widthAnchor.constraint(equalToConstant: 40),
             findButton.heightAnchor.constraint(equalToConstant: 40),
             
-            searchField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            searchField.leadingAnchor.constraint(equalTo: locationButton.trailingAnchor, constant: 5),
-            searchField.trailingAnchor.constraint(equalTo: findButton.leadingAnchor, constant: -5)
+//            searchField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+//            searchField.leadingAnchor.constraint(equalToSystemSpacingAfter: locationButton.trailingAnchor, multiplier: 1),
+//            findButton.leadingAnchor.constraint(equalToSystemSpacingAfter: searchField.trailingAnchor, multiplier: 1)
             
         ])
     }
