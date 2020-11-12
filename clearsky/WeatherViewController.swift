@@ -16,6 +16,8 @@ class WeatherViewController: UIViewController {
     let findButton = UIButton()
     let searchField = UITextField()
     let conditionImageView = UIImageView()
+    let temperatureLabel = UILabel()
+    let cityLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +61,9 @@ extension WeatherViewController {
         conditionImageView.image = UIImage(systemName: .conditionImageName)
         conditionImageView.tintColor = UIColor.black
         
+        temperatureLabel.text = "24.8 ℃"
+        cityLabel.text = "Moscow"
+        
     }
     
     func layout() {
@@ -67,6 +72,9 @@ extension WeatherViewController {
         
         rootStackView.addArrangedSubview(searchStackView)
         rootStackView.addArrangedSubview(conditionImageView)
+        rootStackView.addArrangedSubview(temperatureLabel)
+        rootStackView.addArrangedSubview(cityLabel
+        )
         
         searchStackView.addArrangedSubview(locationButton)
         searchStackView.addArrangedSubview(searchField)
@@ -92,6 +100,13 @@ extension WeatherViewController {
             
             conditionImageView.widthAnchor.constraint(equalToConstant: 120),
             conditionImageView.heightAnchor.constraint(equalToConstant: 120),
+            
+            
+            temperatureLabel.widthAnchor.constraint(equalToConstant: 120),
+            temperatureLabel.heightAnchor.constraint(equalToConstant: 120),
+            
+            cityLabel.widthAnchor.constraint(equalToConstant: 120),
+            cityLabel.heightAnchor.constraint(equalToConstant: 120),
             
         ])
     }
