@@ -15,6 +15,7 @@ class WeatherViewController: UIViewController {
     let locationButton = UIButton()
     let findButton = UIButton()
     let searchField = UITextField()
+    let conditionImageView = UIImageView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +56,9 @@ extension WeatherViewController {
         searchField.borderStyle = .roundedRect
         searchField.backgroundColor = .systemFill
         
+        conditionImageView.image = UIImage(systemName: .conditionImageName)
+        conditionImageView.tintColor = UIColor.black
+        
     }
     
     func layout() {
@@ -62,6 +66,7 @@ extension WeatherViewController {
         view.addSubview(rootStackView)
         
         rootStackView.addArrangedSubview(searchStackView)
+        rootStackView.addArrangedSubview(conditionImageView)
         
         searchStackView.addArrangedSubview(locationButton)
         searchStackView.addArrangedSubview(searchField)
@@ -83,7 +88,10 @@ extension WeatherViewController {
             
             findButton.widthAnchor.constraint(equalToConstant: 40),
             findButton.heightAnchor.constraint(equalToConstant: 40),
-            rootStackView.trailingAnchor.constraint(equalToSystemSpacingAfter: findButton.trailingAnchor, multiplier: 1)
+            rootStackView.trailingAnchor.constraint(equalToSystemSpacingAfter: findButton.trailingAnchor, multiplier: 1),
+            
+            conditionImageView.widthAnchor.constraint(equalToConstant: 120),
+            conditionImageView.heightAnchor.constraint(equalToConstant: 120),
             
         ])
     }
@@ -93,4 +101,5 @@ extension String {
     public static let backGroundName = "background"
     public static let locationSignName = "location.fill.viewfinder"
     public static let findButtonName = "magnifyingglass.circle"
+    public static let conditionImageName = "sun.max"
 }
