@@ -60,7 +60,6 @@ extension WeatherViewController {
     func layout() {
         view.addSubview(backgroundView)
         view.addSubview(rootStackView)
-        view.addSubview(searchStackView)
         
         rootStackView.addArrangedSubview(searchStackView)
         
