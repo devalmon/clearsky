@@ -72,19 +72,11 @@ extension WeatherViewController {
             searchStackView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: searchStackView.trailingAnchor, multiplier: 1),
             
-//            locationButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
-//            locationButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
             locationButton.widthAnchor.constraint(equalToConstant: 40),
             locationButton.heightAnchor.constraint(equalToConstant: 40),
             
-//            findButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
-//            view.trailingAnchor.constraint(equalToSystemSpacingAfter: findButton.trailingAnchor, multiplier: 1),
             findButton.widthAnchor.constraint(equalToConstant: 40),
             findButton.heightAnchor.constraint(equalToConstant: 40),
-            
-//            searchField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-//            searchField.leadingAnchor.constraint(equalToSystemSpacingAfter: locationButton.trailingAnchor, multiplier: 1),
-//            findButton.leadingAnchor.constraint(equalToSystemSpacingAfter: searchField.trailingAnchor, multiplier: 1)
             
         ])
     }
