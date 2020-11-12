@@ -61,9 +61,6 @@ extension WeatherViewController {
         view.addSubview(backgroundView)
         view.addSubview(rootStackView)
         view.addSubview(searchStackView)
-        view.addSubview(locationButton)
-        view.addSubview(findButton)
-        view.addSubview(searchField)
         
         rootStackView.addArrangedSubview(searchStackView)
         
