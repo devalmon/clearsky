@@ -80,6 +80,7 @@ extension WeatherViewController {
             rootStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             rootStackView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: rootStackView.trailingAnchor, multiplier: 1),
+            searchStackView.widthAnchor.constraint(equalTo: rootStackView.widthAnchor),
             
             locationButton.widthAnchor.constraint(equalToConstant: 40),
             locationButton.heightAnchor.constraint(equalToConstant: 40),
