@@ -58,10 +58,16 @@ extension WeatherViewController {
         searchField.borderStyle = .roundedRect
         searchField.backgroundColor = .systemFill
         
+        conditionImageView.translatesAutoresizingMaskIntoConstraints = false
         conditionImageView.image = UIImage(systemName: .conditionImageName)
         conditionImageView.tintColor = UIColor.black
         
-        temperatureLabel.text = "24.8 ℃"
+        temperatureLabel.translatesAutoresizingMaskIntoConstraints = false
+        temperatureLabel.font = UIFont.systemFont(ofSize: 80)
+        temperatureLabel.text = "24.8°C"
+        
+        cityLabel.translatesAutoresizingMaskIntoConstraints = false
+        cityLabel.font = UIFont.systemFont(ofSize: 50)
         cityLabel.text = "Moscow"
         
     }
@@ -102,10 +108,10 @@ extension WeatherViewController {
             conditionImageView.heightAnchor.constraint(equalToConstant: 120),
             
             
-            temperatureLabel.widthAnchor.constraint(equalToConstant: 120),
+//            temperatureLabel.widthAnchor.constraint(equalToConstant: 120),
             temperatureLabel.heightAnchor.constraint(equalToConstant: 120),
             
-            cityLabel.widthAnchor.constraint(equalToConstant: 120),
+//            cityLabel.widthAnchor.constraint(equalToConstant: 120),
             cityLabel.heightAnchor.constraint(equalToConstant: 120),
             
         ])
