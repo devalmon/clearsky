@@ -23,6 +23,8 @@ class WeatherViewController: UIViewController {
         super.viewDidLoad()
         style()
         layout()
+        
+        searchField.delegate = self
     }
 
 }
@@ -95,7 +97,6 @@ extension WeatherViewController {
             rootStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             rootStackView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: rootStackView.trailingAnchor, multiplier: 1),
-            searchStackView.widthAnchor.constraint(equalTo: rootStackView.widthAnchor),
             
             locationButton.widthAnchor.constraint(equalToConstant: 40),
             locationButton.heightAnchor.constraint(equalToConstant: 40),
@@ -117,6 +118,38 @@ extension WeatherViewController {
         ])
     }
 }
+
+extension WeatherViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        NSLog("begin editing")
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        NSLog("end editing")
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       textField.resignFirstResponder()
+       return true
+    }
+
+     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
+       //input text
+       let searchText  = textField.text! + string
+      //add matching text to arrya
+//       searchArrRes = self.originalArr.filter({(($0["name"] as! String).localizedCaseInsensitiveContains(searchText))})
+//
+//      if(searchArrRes.count == 0){
+//        searching = false
+//      }else{
+//        searching = true
+//     }
+//      self.tableView.reloadData();
+
+      return true
+    }
+}
+
+
 
 extension String {
     public static let backGroundName = "background"
