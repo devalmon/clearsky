@@ -20,8 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = WeatherViewController()
-        window?.rootViewController = viewController
+        let rvc = TabBarController()
+        rvc.selectedIndex = 3
+        window?.rootViewController = rvc
         window?.makeKeyAndVisible()
         window?.windowScene = windowScene
         

@@ -7,15 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A3C52BD2565368500B0CAAA /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C52BC2565368500B0CAAA /* WeatherModel.swift */; };
+		8A4BD8D9259F2CFA000C24CC /* PoorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BD8D8259F2CFA000C24CC /* PoorViewController.swift */; };
+		8A4BD8DC259F2DAE000C24CC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BD8DB259F2DAE000C24CC /* Utilities.swift */; };
+		8A4BD8E625A07AD5000C24CC /* Albums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BD8E525A07AD5000C24CC /* Albums.swift */; };
+		8A4BD8E925A31569000C24CC /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BD8E825A31569000C24CC /* Posts.swift */; };
+		8A4BD8EC25A6E73B000C24CC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BD8EB25A6E738000C24CC /* TabBarController.swift */; };
+		8A4BD8EF25A6EB2B000C24CC /* ScanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BD8EE25A6EB2B000C24CC /* ScanTableViewController.swift */; };
+		8A4BD8F325A6F130000C24CC /* ScanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BD8F225A6F130000C24CC /* ScanCell.swift */; };
+		8A4BD8FD25A717A7000C24CC /* clearskyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BD8FC25A717A7000C24CC /* clearskyUITests.swift */; };
+		8A4BD90D25A717C5000C24CC /* clearskyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BD90C25A717C5000C24CC /* clearskyTests.swift */; };
+		8A4BD91825A71935000C24CC /* rightBarButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BD91725A71935000C24CC /* rightBarButtonTests.swift */; };
 		8A68AEEE255D9E48001D86BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68AEED255D9E48001D86BA /* AppDelegate.swift */; };
 		8A68AEF0255D9E48001D86BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68AEEF255D9E48001D86BA /* SceneDelegate.swift */; };
 		8A68AEF5255D9E48001D86BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A68AEF3255D9E48001D86BA /* Main.storyboard */; };
 		8A68AEF7255D9E4C001D86BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A68AEF6255D9E4C001D86BA /* Assets.xcassets */; };
 		8A68AEFA255D9E4C001D86BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A68AEF8255D9E4C001D86BA /* LaunchScreen.storyboard */; };
 		8A68AF03255D9F85001D86BA /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68AF02255D9F85001D86BA /* WeatherViewController.swift */; };
+		8AA266172597500A008BFBB7 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA266162597500A008BFBB7 /* TestViewController.swift */; };
+		8AF77913258F5080007395E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF77912258F5080007395E9 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8A4BD8FF25A717A7000C24CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A68AEE2255D9E48001D86BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A68AEE9255D9E48001D86BA;
+			remoteInfo = clearsky;
+		};
+		8A4BD90F25A717C5000C24CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A68AEE2255D9E48001D86BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A68AEE9255D9E48001D86BA;
+			remoteInfo = clearsky;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		8A3C52BC2565368500B0CAAA /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		8A425FDC25972433006DCBEE /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8A4BD8D8259F2CFA000C24CC /* PoorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoorViewController.swift; sourceTree = "<group>"; };
+		8A4BD8DB259F2DAE000C24CC /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		8A4BD8E525A07AD5000C24CC /* Albums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Albums.swift; sourceTree = "<group>"; };
+		8A4BD8E825A31569000C24CC /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		8A4BD8EB25A6E738000C24CC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		8A4BD8EE25A6EB2B000C24CC /* ScanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanTableViewController.swift; sourceTree = "<group>"; };
+		8A4BD8F225A6F130000C24CC /* ScanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCell.swift; sourceTree = "<group>"; };
+		8A4BD8FA25A717A7000C24CC /* clearskyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = clearskyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A4BD8FC25A717A7000C24CC /* clearskyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clearskyUITests.swift; sourceTree = "<group>"; };
+		8A4BD8FE25A717A7000C24CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A4BD90A25A717C5000C24CC /* clearskyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = clearskyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A4BD90C25A717C5000C24CC /* clearskyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clearskyTests.swift; sourceTree = "<group>"; };
+		8A4BD90E25A717C5000C24CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A4BD91725A71935000C24CC /* rightBarButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rightBarButtonTests.swift; sourceTree = "<group>"; };
 		8A68AEEA255D9E48001D86BA /* clearsky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clearsky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A68AEED255D9E48001D86BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A68AEEF255D9E48001D86BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,9 +70,25 @@
 		8A68AEF9255D9E4C001D86BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A68AEFB255D9E4C001D86BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A68AF02255D9F85001D86BA /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		8AA266162597500A008BFBB7 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		8AF77912258F5080007395E9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8A4BD8F725A717A7000C24CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A4BD90725A717C5000C24CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A68AEE7255D9E48001D86BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +99,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A4BD8DE259F2DBE000C24CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A4BD8EB25A6E738000C24CC /* TabBarController.swift */,
+				8AF77912258F5080007395E9 /* MainViewController.swift */,
+				8A68AF02255D9F85001D86BA /* WeatherViewController.swift */,
+				8AA266162597500A008BFBB7 /* TestViewController.swift */,
+				8A4BD8D8259F2CFA000C24CC /* PoorViewController.swift */,
+				8A4BD8EE25A6EB2B000C24CC /* ScanTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8A4BD8E0259F2DCA000C24CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A3C52BC2565368500B0CAAA /* WeatherModel.swift */,
+				8A4BD8E525A07AD5000C24CC /* Albums.swift */,
+				8A4BD8E825A31569000C24CC /* Posts.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A4BD8E2259F2DD6000C24CC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8A4BD8DB259F2DAE000C24CC /* Utilities.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8A4BD8F125A6F102000C24CC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8A4BD8F225A6F130000C24CC /* ScanCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8A4BD8FB25A717A7000C24CC /* clearskyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8A4BD8FC25A717A7000C24CC /* clearskyUITests.swift */,
+				8A4BD91725A71935000C24CC /* rightBarButtonTests.swift */,
+				8A4BD8FE25A717A7000C24CC /* Info.plist */,
+			);
+			path = clearskyUITests;
+			sourceTree = "<group>";
+		};
+		8A4BD90B25A717C5000C24CC /* clearskyTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A4BD90C25A717C5000C24CC /* clearskyTests.swift */,
+				8A4BD90E25A717C5000C24CC /* Info.plist */,
+			);
+			path = clearskyTests;
+			sourceTree = "<group>";
+		};
 		8A68AEE1255D9E48001D86BA = {
 			isa = PBXGroup;
 			children = (
 				8A68AEEC255D9E48001D86BA /* clearsky */,
+				8A4BD8FB25A717A7000C24CC /* clearskyUITests */,
+				8A4BD90B25A717C5000C24CC /* clearskyTests */,
 				8A68AEEB255D9E48001D86BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				8A68AEEA255D9E48001D86BA /* clearsky.app */,
+				8A4BD8FA25A717A7000C24CC /* clearskyUITests.xctest */,
+				8A4BD90A25A717C5000C24CC /* clearskyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,7 +182,11 @@
 			children = (
 				8A68AEED255D9E48001D86BA /* AppDelegate.swift */,
 				8A68AEEF255D9E48001D86BA /* SceneDelegate.swift */,
-				8A68AF02255D9F85001D86BA /* WeatherViewController.swift */,
+				8A4BD8F125A6F102000C24CC /* Cells */,
+				8A4BD8E0259F2DCA000C24CC /* Models */,
+				8A4BD8DE259F2DBE000C24CC /* ViewControllers */,
+				8A4BD8E2259F2DD6000C24CC /* Helpers */,
+				8A425FDC25972433006DCBEE /* MyPlayground.playground */,
 				8A68AEF3255D9E48001D86BA /* Main.storyboard */,
 				8A68AEF6255D9E4C001D86BA /* Assets.xcassets */,
 				8A68AEF8255D9E4C001D86BA /* LaunchScreen.storyboard */,
@@ -70,6 +198,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8A4BD8F925A717A7000C24CC /* clearskyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A4BD90125A717A7000C24CC /* Build configuration list for PBXNativeTarget "clearskyUITests" */;
+			buildPhases = (
+				8A4BD8F625A717A7000C24CC /* Sources */,
+				8A4BD8F725A717A7000C24CC /* Frameworks */,
+				8A4BD8F825A717A7000C24CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A4BD90025A717A7000C24CC /* PBXTargetDependency */,
+			);
+			name = clearskyUITests;
+			productName = clearskyUITests;
+			productReference = 8A4BD8FA25A717A7000C24CC /* clearskyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		8A4BD90925A717C5000C24CC /* clearskyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A4BD91125A717C5000C24CC /* Build configuration list for PBXNativeTarget "clearskyTests" */;
+			buildPhases = (
+				8A4BD90625A717C5000C24CC /* Sources */,
+				8A4BD90725A717C5000C24CC /* Frameworks */,
+				8A4BD90825A717C5000C24CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A4BD91025A717C5000C24CC /* PBXTargetDependency */,
+			);
+			name = clearskyTests;
+			productName = clearskyTests;
+			productReference = 8A4BD90A25A717C5000C24CC /* clearskyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8A68AEE9255D9E48001D86BA /* clearsky */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A68AEFE255D9E4C001D86BA /* Build configuration list for PBXNativeTarget "clearsky" */;
@@ -93,9 +257,17 @@
 		8A68AEE2255D9E48001D86BA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1210;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
+					8A4BD8F925A717A7000C24CC = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 8A68AEE9255D9E48001D86BA;
+					};
+					8A4BD90925A717C5000C24CC = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 8A68AEE9255D9E48001D86BA;
+					};
 					8A68AEE9255D9E48001D86BA = {
 						CreatedOnToolsVersion = 12.1;
 					};
@@ -115,11 +287,27 @@
 			projectRoot = "";
 			targets = (
 				8A68AEE9255D9E48001D86BA /* clearsky */,
+				8A4BD8F925A717A7000C24CC /* clearskyUITests */,
+				8A4BD90925A717C5000C24CC /* clearskyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8A4BD8F825A717A7000C24CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A4BD90825A717C5000C24CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A68AEE8255D9E48001D86BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,17 +321,57 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8A4BD8F625A717A7000C24CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A4BD91825A71935000C24CC /* rightBarButtonTests.swift in Sources */,
+				8A4BD8FD25A717A7000C24CC /* clearskyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A4BD90625A717C5000C24CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A4BD90D25A717C5000C24CC /* clearskyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A68AEE6255D9E48001D86BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8A68AF03255D9F85001D86BA /* WeatherViewController.swift in Sources */,
+				8A4BD8D9259F2CFA000C24CC /* PoorViewController.swift in Sources */,
+				8A4BD8EC25A6E73B000C24CC /* TabBarController.swift in Sources */,
 				8A68AEEE255D9E48001D86BA /* AppDelegate.swift in Sources */,
+				8A3C52BD2565368500B0CAAA /* WeatherModel.swift in Sources */,
 				8A68AEF0255D9E48001D86BA /* SceneDelegate.swift in Sources */,
+				8AA266172597500A008BFBB7 /* TestViewController.swift in Sources */,
+				8A4BD8E625A07AD5000C24CC /* Albums.swift in Sources */,
+				8A4BD8EF25A6EB2B000C24CC /* ScanTableViewController.swift in Sources */,
+				8A4BD8E925A31569000C24CC /* Posts.swift in Sources */,
+				8A4BD8F325A6F130000C24CC /* ScanCell.swift in Sources */,
+				8A4BD8DC259F2DAE000C24CC /* Utilities.swift in Sources */,
+				8AF77913258F5080007395E9 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A4BD90025A717A7000C24CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A68AEE9255D9E48001D86BA /* clearsky */;
+			targetProxy = 8A4BD8FF25A717A7000C24CC /* PBXContainerItemProxy */;
+		};
+		8A4BD91025A717C5000C24CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A68AEE9255D9E48001D86BA /* clearsky */;
+			targetProxy = 8A4BD90F25A717C5000C24CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8A68AEF3255D9E48001D86BA /* Main.storyboard */ = {
@@ -165,6 +393,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8A4BD90225A717A7000C24CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V4K88747GJ;
+				INFOPLIST_FILE = clearskyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.onemandev.clearskyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = clearsky;
+			};
+			name = Debug;
+		};
+		8A4BD90325A717A7000C24CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V4K88747GJ;
+				INFOPLIST_FILE = clearskyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.onemandev.clearskyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = clearsky;
+			};
+			name = Release;
+		};
+		8A4BD91225A717C5000C24CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V4K88747GJ;
+				INFOPLIST_FILE = clearskyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.onemandev.clearskyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/clearsky.app/clearsky";
+			};
+			name = Debug;
+		};
+		8A4BD91325A717C5000C24CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V4K88747GJ;
+				INFOPLIST_FILE = clearskyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.onemandev.clearskyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/clearsky.app/clearsky";
+			};
+			name = Release;
+		};
 		8A68AEFC255D9E4C001D86BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -322,6 +632,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8A4BD90125A717A7000C24CC /* Build configuration list for PBXNativeTarget "clearskyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A4BD90225A717A7000C24CC /* Debug */,
+				8A4BD90325A717A7000C24CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A4BD91125A717C5000C24CC /* Build configuration list for PBXNativeTarget "clearskyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A4BD91225A717C5000C24CC /* Debug */,
+				8A4BD91325A717C5000C24CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8A68AEE5255D9E48001D86BA /* Build configuration list for PBXProject "clearsky" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

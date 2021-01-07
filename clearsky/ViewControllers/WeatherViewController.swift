@@ -6,27 +6,87 @@
 //
 
 import UIKit
+import CoreLocation
 
 class WeatherViewController: UIViewController {
     
-    let backgroundView = UIImageView()
-    let rootStackView = UIStackView()
-    let searchStackView = UIStackView()
-    let locationButton = UIButton()
-    let findButton = UIButton()
-    let searchField = UITextField()
-    let conditionImageView = UIImageView()
-    let temperatureLabel = UILabel()
-    let cityLabel = UILabel()
+    let backgroundView      = UIImageView()
+    let rootStackView       = UIStackView()
+    let searchStackView     = UIStackView()
+    let locationButton      = UIButton()
+    let findButton          = UIButton()
+    let searchField         = UITextField()
+    let conditionImageView  = UIImageView()
+    let temperatureLabel    = UILabel()
+    let cityLabel           = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
         layout()
         
-        searchField.delegate = self
-    }
+        DispatchQueue.main.async {
+            self.searchField.becomeFirstResponder()
+        }
+        
 
+        
+//        MARK: - URLSESSION
+        
+//        let headers = [
+//            "x-rapidapi-key": "crxld6lmVBmshJhJm3r9KVGEXfW9p1Yyre2jsneBeJP3h94ilL",
+//            "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
+//        ]
+
+        let request = NSMutableURLRequest(url: NSURL(string: .darkUrlString)! as URL,
+                                                cachePolicy: .useProtocolCachePolicy,
+                                            timeoutInterval: 10.0)
+        request.httpMethod = "GET"
+//        request.allHTTPHeaderFields = headers
+
+        
+        let dataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error ?? "ERROR")
+            } else {
+//                let httpResponse = response as? HTTPURLResponse
+//                print(httpResponse)
+//                print(String(data: data, encoding: UTF8))
+                
+                guard let dataResponse = data,
+                          error == nil else {
+                          print(error?.localizedDescription ?? "Response Error")
+                          return }
+                    do{
+                        //here dataResponse received from a network request
+                        let jsonResponse = try JSONSerialization.jsonObject(with:
+                                               dataResponse, options: [])
+                        print(jsonResponse) //Response result
+                        
+                        let jsonDecoder = JSONDecoder()
+                
+                            let parsedJSON = try jsonDecoder.decode(Weather.self, from: dataResponse)
+                            DispatchQueue.main.async {
+                                self.temperatureLabel.text = String(parsedJSON.currently.temperature)
+                            }
+                        
+                        
+                        
+                     } catch let parsingError {
+                        print("Error", parsingError)
+                   }
+            
+                
+            }
+        })
+
+//        dataTask.resume()
+        
+    }
+    
+//    MARK: - LOCATION
+    let locationManager = CLLocationManager()
+    
 }
 
 extension WeatherViewController {
@@ -59,6 +119,10 @@ extension WeatherViewController {
         searchField.textAlignment = .right
         searchField.borderStyle = .roundedRect
         searchField.backgroundColor = .systemFill
+        searchField.autocapitalizationType = .words
+        searchField.delegate = self
+        searchField.addTarget(self, action: #selector(actionTextChanged(sender:)), for: .editingChanged)
+        searchField.isUserInteractionEnabled = true
         
         conditionImageView.translatesAutoresizingMaskIntoConstraints = false
         conditionImageView.image = UIImage(systemName: .conditionImageName)
@@ -66,7 +130,8 @@ extension WeatherViewController {
         
         temperatureLabel.translatesAutoresizingMaskIntoConstraints = false
         temperatureLabel.font = UIFont.systemFont(ofSize: 80)
-        temperatureLabel.text = "24.8°C"
+//        temperatureLabel.text = "24.8°C"
+        temperatureLabel.text = ""
         
         cityLabel.translatesAutoresizingMaskIntoConstraints = false
         cityLabel.font = UIFont.systemFont(ofSize: 50)
@@ -119,12 +184,18 @@ extension WeatherViewController {
     }
 }
 
+
 extension WeatherViewController: UITextFieldDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        NSLog("begin editing")
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        //TODO: create
+        return true
     }
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        NSLog("end editing")
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        //TODO: create
+        return true
+    }
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        //TODO: create
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -134,7 +205,7 @@ extension WeatherViewController: UITextFieldDelegate {
 
      public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
        //input text
-       let searchText  = textField.text! + string
+//       let searchText  = textField.text! + string
       //add matching text to arrya
 //       searchArrRes = self.originalArr.filter({(($0["name"] as! String).localizedCaseInsensitiveContains(searchText))})
 //
@@ -147,13 +218,12 @@ extension WeatherViewController: UITextFieldDelegate {
 
       return true
     }
+    
 }
 
-
-
-extension String {
-    public static let backGroundName = "background"
-    public static let locationSignName = "location.fill.viewfinder"
-    public static let findButtonName = "magnifyingglass.circle"
-    public static let conditionImageName = "sun.max"
+//MARK: - Actions
+extension WeatherViewController {
+    @objc private func actionTextChanged(sender: UITextField) {
+        //TODO: create
+    }
 }
